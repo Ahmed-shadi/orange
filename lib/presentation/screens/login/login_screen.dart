@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:odc/presentation/constant/app_assets.dart';
 
+import '../../../wedjet/costom_text_form_field.dart';
 import '../../constant/constants.dart';
 import '../../signup/signup_screen.dart';
+import '../home/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -71,7 +73,11 @@ class LoginScreen extends StatelessWidget {
                 height: size.height / 20,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ));},
                 child: const Text(
                   'Login',
                 ),
